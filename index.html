@@ -5,14 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 </head>
 <body>
-    <h1>Weather App</h1>
-    <input type="text" id="city-input" placeholder="Enter city name">
-    <button id="search-btn">Search</button>
-    <div id="weather-result"></div>
+    <div class="container">
+        <main class="weather-dashboard">
+            <h1 style="text-align: center; font-size: 15px; color:aliceblue">Weather App</h1>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Enter location">
+                <button id="search-btn">🔍 Search</button>
+            </div>
+    
+            <div class="weather-info">
+                <div class="current-weather">
+                    <h2 id="location">New York</h2>
+                    <h1 id="temperature">24°C</h1>
+                    <p id="description">Partly Cloudy</p>
+                    <img id="weather-icon" src="">
+                </div>
+                <div class="map-container">
+                    <div id="map" style="height: 400px;"></div>
+                </div>
+            </div>
 
+            <div class="forecast">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-grid" id="forecast-grid"></div>
+            </div>
+        </main>
+    </div>
+    
     <script type="module" src="script.js"></script>
 </body>
 </html>
